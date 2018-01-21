@@ -1,0 +1,15 @@
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: $scroll-behavior;
+}
+
+body {
+  background-color: $body-background-color;
+  text-rendering: $body-text-rendering;
+  font-family: $font-sans-serif;
+  font-size: $body-font-size;
+  font-weight: $body-font-weight;
+  line-height: $body-line-height;
+  color: $body-color;
+}
