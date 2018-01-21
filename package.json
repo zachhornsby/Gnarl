@@ -26,11 +26,12 @@
   },
   "scripts": {
     "autoprefix": "postcss --use autoprefixer --output css/groundwork.css css/groundwork.css",
-    "serve": "browser-sync start --server dist --server bower_components --files '/*'",
     "build": "npm run clean && npm run build-sass && npm run autoprefix",
     "build-sass": "node-sass --output-style expanded --source-map true --output css/ groundwork.scss --outFile css/groundwork.css",
     "clean": "rm -rf css",
     "pre-push": "npm run build && git add css && git commit --amend --no-edit",
-    "start": "npm run build-sass -- --watch & npm run serve"
+    "start": "npm run build-sass -- --watch",
+    "serve-test": "browser-sync start --server try --files 'try/*'",
+    "start-test": "npm run build-sass -- --watch & npm run serve-test"
   }
 }
