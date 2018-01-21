@@ -7,6 +7,11 @@ $font-size-large: $font-size * 1.2 !default;
 $font-size-xlarge: $font-size * 1.4 !default;
 
 // Colors
+$primary: hsl(259, 80%, 56%) !default;
+$info: hsl(197, 94%, 50%) !default;
+$success: hsl(156, 61%, 50%) !default;
+$warning: hsl(48, 100%, 65%) !default;
+$danger: hsl(347, 100%, 64%) !default;
 $gray: hsl(0, 0%, 18%) !default;
 $gray-light: hsl(0, 0%, 92%) !default;
 $white: hsl(0, 0%, 100%) !default;
