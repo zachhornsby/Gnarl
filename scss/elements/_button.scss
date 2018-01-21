@@ -54,9 +54,19 @@ $button: (
   }
 
   &:hover:not([disabled]) {
-    border-color: darken($gray-light, 6%);
-    background-color: darken($gray-light, 6%);
+    border-color: darken($gray-light, 4%);
+    background-color: darken($gray-light, 4%);
     text-decoration: none;
+  }
+
+  &:active:not([disabled]) {
+    border-color: darken($gray-light, 20%);
+    background-color: darken($gray-light, 20%);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0.2em darken($gray-light, 20%) inset;
+    outline: none;
   }
 
   &:disabled {
@@ -82,8 +92,17 @@ $button: (
       }
 
       &:hover:not([disabled]) {
-        border-color: darken($hsl, 6%);
-        background-color: darken($hsl, 6%);
+        border-color: darken($hsl, 4%);
+        background-color: darken($hsl, 4%);
+      }
+
+      &:active:not([disabled]) {
+        border-color: darken($hsl, 20%);
+        background-color: darken($hsl, 20%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0.2em darken($hsl, 20%) inset;
       }
 
       &.is-hollow {

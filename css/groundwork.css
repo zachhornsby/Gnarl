@@ -137,9 +137,19 @@ body {
 }
 
 .button:hover:not([disabled]) {
-  border-color: #dbdbdb;
-  background-color: #dbdbdb;
+  border-color: #e0e0e0;
+  background-color: #e0e0e0;
   text-decoration: none;
+}
+
+.button:active:not([disabled]) {
+  border-color: #b8b8b8;
+  background-color: #b8b8b8;
+}
+
+.button:focus {
+  box-shadow: 0 0 0.2em #b8b8b8 inset;
+  outline: none;
 }
 
 .button:disabled {
@@ -166,8 +176,17 @@ body {
 }
 
 .button.is-primary:hover:not([disabled]) {
-  border-color: #5a1ae6;
-  background-color: #5a1ae6;
+  border-color: #6123e7;
+  background-color: #6123e7;
+}
+
+.button.is-primary:active:not([disabled]) {
+  border-color: #4112a5;
+  background-color: #4112a5;
+}
+
+.button.is-primary:focus {
+  box-shadow: 0 0 0.2em #4112a5 inset;
 }
 
 .button.is-primary.is-hollow {
@@ -187,8 +206,17 @@ body {
 }
 
 .button.is-success:hover:not([disabled]) {
-  border-color: #2cb57e;
-  background-color: #2cb57e;
+  border-color: #2ebd84;
+  background-color: #2ebd84;
+}
+
+.button.is-success:active:not([disabled]) {
+  border-color: #1e7b56;
+  background-color: #1e7b56;
+}
+
+.button.is-success:focus {
+  box-shadow: 0 0 0.2em #1e7b56 inset;
 }
 
 .button.is-success.is-hollow {
@@ -208,8 +236,17 @@ body {
 }
 
 .button.is-info:hover:not([disabled]) {
-  border-color: #079eda;
-  background-color: #079eda;
+  border-color: #07a5e4;
+  background-color: #07a5e4;
+}
+
+.button.is-info:active:not([disabled]) {
+  border-color: #056c94;
+  background-color: #056c94;
+}
+
+.button.is-info:focus {
+  box-shadow: 0 0 0.2em #056c94 inset;
 }
 
 .button.is-info.is-hollow {
@@ -229,8 +266,17 @@ body {
 }
 
 .button.is-warning:hover:not([disabled]) {
-  border-color: #ffd52e;
-  background-color: #ffd52e;
+  border-color: #ffd738;
+  background-color: #ffd738;
+}
+
+.button.is-warning:active:not([disabled]) {
+  border-color: #e6b800;
+  background-color: #e6b800;
+}
+
+.button.is-warning:focus {
+  box-shadow: 0 0 0.2em #e6b800 inset;
 }
 
 .button.is-warning.is-hollow {
@@ -250,8 +296,17 @@ body {
 }
 
 .button.is-danger:hover:not([disabled]) {
-  border-color: #ff2957;
-  background-color: #ff2957;
+  border-color: #ff335f;
+  background-color: #ff335f;
+}
+
+.button.is-danger:active:not([disabled]) {
+  border-color: #e00031;
+  background-color: #e00031;
+}
+
+.button.is-danger:focus {
+  box-shadow: 0 0 0.2em #e00031 inset;
 }
 
 .button.is-danger.is-hollow {
@@ -271,8 +326,17 @@ body {
 }
 
 .button.is-white:hover:not([disabled]) {
-  border-color: #f0f0f0;
-  background-color: #f0f0f0;
+  border-color: whitesmoke;
+  background-color: whitesmoke;
+}
+
+.button.is-white:active:not([disabled]) {
+  border-color: #cccccc;
+  background-color: #cccccc;
+}
+
+.button.is-white:focus {
+  box-shadow: 0 0 0.2em #cccccc inset;
 }
 
 .button.is-white.is-hollow {
@@ -294,6 +358,15 @@ body {
 .button.is-link:hover:not([disabled]) {
   border-color: transparent;
   background-color: transparent;
+}
+
+.button.is-link:active:not([disabled]) {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.button.is-link:focus {
+  box-shadow: 0 0 0.2em transparent inset;
 }
 
 .button.is-link.is-hollow:hover:not([disabled]) {
