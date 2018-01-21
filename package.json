@@ -31,7 +31,7 @@
     "clean": "rm -rf css",
     "pre-push": "npm run build && git add css && git commit --amend --no-edit",
     "start": "npm run build-sass -- --watch",
-    "serve-test": "browser-sync start --server try --files 'try/*'",
+    "serve-test": "browser-sync start --server --files '**/*'",
     "start-test": "npm run build-sass -- --watch & npm run serve-test"
   }
 }
