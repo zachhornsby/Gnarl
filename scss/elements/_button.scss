@@ -1,0 +1,119 @@
+$button-font-size: $font-size !default;
+$button-line-height: 2.85em !default;
+$button-height: 2.85em !default;
+$button-padding: 1em !default;
+$button-border-radius: 2px !default;
+
+$button: (
+  colors: (
+    primary: $primary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+    white: $white,
+    link: transparent
+  ),
+  sizes: (
+    small: $font-size-small,
+    large: $font-size-large,
+    xlarge: $font-size-xlarge,
+  )
+);
+
+.button {
+  display: inline-block;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: $button-padding;
+  padding-left: $button-padding;
+  height: $button-height;
+  border: 1px solid $gray-light;
+  border-radius: $button-border-radius;
+  background-color: $gray-light;
+  color: $gray;
+  text-decoration: none;
+  font-size: $button-font-size;
+  line-height: $button-line-height;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+
+  strong {
+    color: inherit;
+  }
+
+  .icon {
+    position: relative;
+    top: -0.125em;
+    font-size: 0.7em;
+  }
+
+  *:not(:last-child) {
+    margin-right: 0.25em;
+  }
+
+  &:hover:not([disabled]) {
+    border-color: darken($gray-light, 6%);
+    background-color: darken($gray-light, 6%);
+    text-decoration: none;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+
+  @each $size, $multipler in get($button, sizes) {
+    &.is-#{$size} {
+      font-size: $multipler;
+    }
+  }
+
+  @each $name, $hsl in get($button, colors) {
+    &.is-#{$name} {
+      background-color: $hsl;
+      border-color: $hsl;
+
+      @if $name == warning or $name == link {
+        color: $gray;
+      } @else {
+        color: $white;
+      }
+
+      &:hover:not([disabled]) {
+        border-color: darken($hsl, 6%);
+        background-color: darken($hsl, 6%);
+      }
+
+      &.is-hollow {
+
+        @if $name != link {
+          color: $hsl;
+        }
+
+        &:hover:not([disabled]) {
+          border-color: $hsl;
+          background-color: $hsl;
+
+          @if $name == warning or $name == link {
+            color: $gray;
+          } @else {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  &.is-hollow {
+    background-color: transparent;
+    color: $gray;
+
+    &:hover:not([disabled]) {
+      background-color: $gray-light;
+      border-color: $gray-light;
+      color: $gray;
+    }
+  }
+}
