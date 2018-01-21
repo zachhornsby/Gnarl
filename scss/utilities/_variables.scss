@@ -21,11 +21,11 @@ $black: hsl(0, 0%, 4%) !default;
 $body-background-color: white !default;
 $body-text-rendering: optimizeLegibility !default;
 $body-font-family: $font-sans-serif !default;
-$body-font-size: $font-size;
+$body-font-size: $font-size !default;
 $body-font-weight: 300 !default;
 $body-line-height: 1.5 !default;
 $body-color: $gray !default;
 
 // Miscellaneous
-$scroll-behavior: smooth;
-$border-radius: 2px;
+$scroll-behavior: smooth !default;
+$border-radius: 2px !default;
