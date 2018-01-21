@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "groundwork.css",
+	"sources": [
+		"../groundwork.scss",
+		"../scss/base/_generic.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

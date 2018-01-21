@@ -1,0 +1,36 @@
+{
+  "name": "groundwork-css",
+  "version": "0.0.1",
+  "homepage": "http://groundwork.io",
+  "author": "zachhornsby <me@zachhornsby.com>",
+  "description": "A modern CSS framework",
+  "main": "groundwork.scss",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachhornsby/groundwork.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "sass",
+    "framework"
+  ],
+  "bugs": {
+    "url": "https://github.com/zachhornsby/groundwork/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "browser-sync": "2.23.5",
+    "node-sass": "^4.7.2",
+    "postcss-cli": "^4.1.1"
+  },
+  "scripts": {
+    "autoprefix": "postcss --use autoprefixer --output css/groundwork.css css/groundwork.css",
+    "serve": "browser-sync start --server dist --server bower_components --files '/*'",
+    "build": "npm run clean && npm run build-sass && npm run autoprefix",
+    "build-sass": "node-sass --output-style expanded --source-map true --output css/ groundwork.scss --outFile css/groundwork.css",
+    "clean": "rm -rf css",
+    "pre-push": "npm run build && git add css && git commit --amend --no-edit",
+    "start": "npm run build-sass -- --watch & npm run serve"
+  }
+}
