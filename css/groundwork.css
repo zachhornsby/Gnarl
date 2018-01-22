@@ -386,4 +386,27 @@ body {
   color: #2e2e2e;
 }
 
+.buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.buttons .button {
+  margin-bottom: 0.4rem;
+}
+
+.buttons .button:not(:last-child) {
+  margin-right: 0.4rem;
+}
+
+.buttons:last-child {
+  margin-bottom: -0.4rem;
+}
+
+.buttons:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=groundwork.css.map */
