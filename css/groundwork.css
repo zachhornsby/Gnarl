@@ -118,7 +118,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
   line-height: 2.85em;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
@@ -190,6 +190,7 @@ body {
 }
 
 .button.is-primary.is-hollow {
+  border-color: #6e35e9;
   color: #6e35e9;
 }
 
@@ -220,6 +221,7 @@ body {
 }
 
 .button.is-success.is-hollow {
+  border-color: #32cd8f;
   color: #32cd8f;
 }
 
@@ -250,6 +252,7 @@ body {
 }
 
 .button.is-info.is-hollow {
+  border-color: #08b3f7;
   color: #08b3f7;
 }
 
@@ -280,6 +283,7 @@ body {
 }
 
 .button.is-warning.is-hollow {
+  border-color: #ffdb4d;
   color: #ffdb4d;
 }
 
@@ -310,6 +314,7 @@ body {
 }
 
 .button.is-danger.is-hollow {
+  border-color: #ff476f;
   color: #ff476f;
 }
 
@@ -340,6 +345,7 @@ body {
 }
 
 .button.is-white.is-hollow {
+  border-color: white;
   color: white;
 }
 
@@ -369,6 +375,10 @@ body {
   box-shadow: 0 0 0.2em transparent inset;
 }
 
+.button.is-link.is-hollow {
+  border-color: transparent;
+}
+
 .button.is-link.is-hollow:hover:not([disabled]) {
   border-color: transparent;
   background-color: transparent;
@@ -377,12 +387,13 @@ body {
 
 .button.is-hollow {
   background-color: transparent;
+  border-color: #d1d1d1;
   color: #2e2e2e;
 }
 
 .button.is-hollow:hover:not([disabled]) {
-  background-color: #ebebeb;
-  border-color: #ebebeb;
+  background-color: #d1d1d1;
+  border-color: #d1d1d1;
   color: #2e2e2e;
 }
 

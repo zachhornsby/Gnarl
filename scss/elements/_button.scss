@@ -5,7 +5,7 @@ $button-padding: 1em !default;
 $button-border-radius: 2px !default;
 
 $button: (
-  colors: (
+  types: (
     primary: $primary,
     success: $success,
     info: $info,
@@ -29,14 +29,14 @@ $button: (
   padding-right: $button-padding;
   padding-left: $button-padding;
   height: $button-height;
-  border: 1px solid $gray-light;
+  border: 1px solid $gray-lighter;
   border-radius: $button-border-radius;
-  background-color: $gray-light;
+  background-color: $gray-lighter;
   color: $gray;
   text-decoration: none;
   font-size: $button-font-size;
   line-height: $button-line-height;
-  transition: all 0.2s ease-in;
+  transition: all 0.2s ease;
   cursor: pointer;
 
   strong {
@@ -54,18 +54,18 @@ $button: (
   }
 
   &:hover:not([disabled]) {
-    border-color: darken($gray-light, 4%);
-    background-color: darken($gray-light, 4%);
+    border-color: darken($gray-lighter, 4%);
+    background-color: darken($gray-lighter, 4%);
     text-decoration: none;
   }
 
   &:active:not([disabled]) {
-    border-color: darken($gray-light, 20%);
-    background-color: darken($gray-light, 20%);
+    border-color: darken($gray-lighter, 20%);
+    background-color: darken($gray-lighter, 20%);
   }
 
   &:focus {
-    box-shadow: 0 0 0.2em darken($gray-light, 20%) inset;
+    box-shadow: 0 0 0.2em darken($gray-lighter, 20%) inset;
     outline: none;
   }
 
@@ -80,7 +80,7 @@ $button: (
     }
   }
 
-  @each $name, $hsl in get($button, colors) {
+  @each $name, $hsl in get($button, types) {
     &.is-#{$name} {
       background-color: $hsl;
       border-color: $hsl;
@@ -106,6 +106,7 @@ $button: (
       }
 
       &.is-hollow {
+        border-color: $hsl;
 
         @if $name != link {
           color: $hsl;
@@ -127,6 +128,7 @@ $button: (
 
   &.is-hollow {
     background-color: transparent;
+    border-color: $gray-light;
     color: $gray;
 
     &:hover:not([disabled]) {
