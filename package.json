@@ -1,13 +1,13 @@
 {
-  "name": "groundwork-css",
+  "name": "gnarl-css",
   "version": "0.0.1",
-  "homepage": "http://groundwork.io",
+  "homepage": "http://gnarl.io",
   "author": "zachhornsby <me@zachhornsby.com>",
   "description": "A modern CSS framework",
-  "main": "groundwork.scss",
+  "main": "gnarl.scss",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zachhornsby/groundwork.git"
+    "url": "git+https://github.com/zachhornsby/gnarl.git"
   },
   "license": "MIT",
   "keywords": [
@@ -16,7 +16,7 @@
     "framework"
   ],
   "bugs": {
-    "url": "https://github.com/zachhornsby/groundwork/issues"
+    "url": "https://github.com/zachhornsby/gnarl/issues"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.5",
@@ -25,9 +25,9 @@
     "postcss-cli": "^4.1.1"
   },
   "scripts": {
-    "autoprefix": "postcss --use autoprefixer --output css/groundwork.css css/groundwork.css",
+    "autoprefix": "postcss --use autoprefixer --output css/gnarl.css css/gnarl.css",
     "build": "npm run clean && npm run build-sass && npm run autoprefix",
-    "build-sass": "node-sass --output-style expanded --source-map true --output css/ groundwork.scss --outFile css/groundwork.css",
+    "build-sass": "node-sass --output-style expanded --source-map true --output css/ gnarl.scss --outFile css/gnarl.css",
     "clean": "rm -rf css",
     "pre-push": "npm run build && git add css && git commit --amend --no-edit",
     "start": "npm run build-sass -- --watch",

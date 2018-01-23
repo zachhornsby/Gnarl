@@ -1,10 +1,10 @@
-[![Groundwork](https://cdn.rawgit.com/zachhornsby/Groundwork/51b0ad28/images/groundwork-logo.svg)](https://github.com/zachhornsby/Groundwork)
+[![Gnarl](https://cdn.rawgit.com/zachhornsby/Gnarl/74d73838/images/gnarl-logo.svg)](https://github.com/zachhornsby/Gnarl)
 
 A CSS framework.
 
 ## Development
 
-Groundwork is in early development. Everything is subject to change.
+Gnarl is in early development. Everything is subject to change.
 
 - [x] Typography
 - [x] Colors
@@ -23,9 +23,9 @@ Not much here yet.
 ### NPM
 
 ```sh
-npm install groundwork-css
+npm install gnarl-css
 ```
 
 ## License
 
-Code &copy;2018 Zach Hornsby. This project is distributed under the MIT license which can be found in [LICENSE](https://github.com/zachhornsby/Groundwork/blob/master/LICENSE).
+Code &copy;2018 Zach Hornsby. This project is distributed under the MIT license which can be found in [LICENSE](https://github.com/zachhornsby/Gnarl/blob/master/LICENSE).

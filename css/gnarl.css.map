@@ -1,8 +1,8 @@
 {
 	"version": 3,
-	"file": "groundwork.css",
+	"file": "gnarl.css",
 	"sources": [
-		"../groundwork.scss",
+		"../gnarl.scss",
 		"../scss/utilities/_functions.scss",
 		"../scss/utilities/_variables.scss",
 		"../scss/base/_reset.scss",
