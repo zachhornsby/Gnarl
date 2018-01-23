@@ -2,9 +2,23 @@
 
 A CSS framework.
 
+## Development
+
+Groundwork is in early development. Everything is subject to change.
+
+- [x] Typography
+- [x] Colors
+- [x] Variables (ongoing)
+- [x] Buttons
+- [ ] Forms
+- [ ] Tables
+- [ ] Figure
+- [ ] Navbar
+- [ ] Grid
+
 ## Quick install
 
-Groundwork is in early development.
+Not much here yet.
 
 ### NPM
 
