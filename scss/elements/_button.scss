@@ -1,8 +1,9 @@
 $button-font-size: $font-size !default;
-$button-line-height: 2.85em !default;
 $button-height: 2.85em !default;
 $button-padding: 1em !default;
-$button-border-radius: 2px !default;
+$button-border-radius: 0.1em !default;
+$button-border-size: 0.1em !default;
+$button-line-height: $button-height - $button-border-size * 2 !default;
 
 $button: (
   types: (
@@ -29,7 +30,7 @@ $button: (
   padding-right: $button-padding;
   padding-left: $button-padding;
   height: $button-height;
-  border: 1px solid $gray-lighter;
+  border: $button-border-size solid $gray-lighter;
   border-radius: $button-border-radius;
   background-color: $gray-lighter;
   color: $gray;
