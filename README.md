@@ -1,4 +1,4 @@
-[![Groundwork](https://cdn.rawgit.com/zachhornsby/Groundwork/a9221b56/images/groundwork-logo.svg)](https://github.com/zachhornsby/Groundwork)
+[![Groundwork](https://cdn.rawgit.com/zachhornsby/Groundwork/51b0ad28/images/groundwork-logo.svg)](https://github.com/zachhornsby/Groundwork)
 
 A CSS framework.
 
