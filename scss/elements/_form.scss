@@ -1,0 +1,127 @@
+$input-font-size: $font-size !default;
+$input-height: 2.85em !default;
+$input-padding: 1em !default;
+$input-border-radius: 0.1em !default;
+$input-border-size: 0.1em !default;
+$input-line-height: $input-height - $input-border-size * 2 !default;
+$input-arrow-size: 0.5em !default;
+
+$input: (
+  types: (
+    primary: $primary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+    white: $white,
+    link: transparent
+  ),
+  sizes: (
+    small: $font-size-small,
+    large: $font-size-large,
+    xlarge: $font-size-xlarge,
+  )
+);
+
+@mixin input() {
+  display: inline-block;
+  padding-right: $input-padding;
+  padding-left: $input-padding;
+  height: $input-height;
+  border: 0.1em solid $gray-light;
+  border-radius: $input-border-radius;
+  background-color: $white;
+  color: $gray;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: darken($gray-light, 4%);
+    box-shadow: inset 0 0 0.15em $gray-light;
+  }
+
+  &:focus {
+    outline: 0;
+    box-shadow: inset 0 0 0.15em darken($gray-light, 6%);
+  }
+}
+
+.input {
+  @include input;
+
+  @each $size, $multipler in get($input, sizes) {
+    &.is-#{$size} {
+      font-size: $multipler;
+    }
+  }
+
+  @each $name, $hsl in get($input, types) {
+    &.is-#{$name} {
+      border-color: $hsl;
+
+      &:hover {
+        border-color: darken($hsl, 4%);
+        box-shadow: inset 0 0 0.15em $hsl;
+      }
+
+      &:focus {
+        box-shadow: inset 0 0 0.2em darken($hsl, 6%);
+      }
+    }
+  }
+}
+
+.select {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  vertical-align: top;
+
+  // arrow
+  &:after {
+    border: $input-border-size solid $gray-light;
+    border-right: 0;
+    border-top: 0;
+    display: block;
+    width: $input-arrow-size;
+    height: $input-arrow-size;
+    pointer-events: none;
+    position: absolute;
+    transform: rotate(-45deg);
+    transform-origin: center;
+    margin-top: -$input-arrow-size / 2 + -0.03em;
+    top: 50%;
+    right: $input-padding;
+    z-index: 2;
+    content: " ";
+  }
+
+  @each $size, $multipler in get($input, sizes) {
+    &.is-#{$size} select {
+
+      font-size: $multipler;
+    }
+  }
+
+  @each $name, $hsl in get($input, types) {
+    &.is-#{$name} select {
+      border-color: $hsl;
+
+      &:hover {
+        border-color: darken($hsl, 4%);
+        box-shadow: inset 0 0 0.15em $hsl;
+      }
+
+      &:focus {
+        box-shadow: inset 0 0 0.2em darken($hsl, 6%);
+      }
+    }
+  }
+
+  select {
+    @include input;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
