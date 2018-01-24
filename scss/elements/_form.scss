@@ -179,3 +179,18 @@ $control: (
     }
   }
 }
+
+.checkbox, .radio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+  &[disabled], input[disabled] {
+    cursor: not-allowed;
+  }
+
+  input {
+    cursor: pointer;
+    vertical-align: 0.1em;
+  }
+}

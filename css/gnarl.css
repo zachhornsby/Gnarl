@@ -542,6 +542,21 @@ body {
   box-shadow: inset 0 0 0.2em transparent;
 }
 
+.checkbox, .radio {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox[disabled], .checkbox input[disabled], .radio[disabled], .radio input[disabled] {
+  cursor: not-allowed;
+}
+
+.checkbox input, .radio input {
+  cursor: pointer;
+  vertical-align: 0.1em;
+}
+
 .button {
   display: inline-block;
   margin: 0;
