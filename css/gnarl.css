@@ -119,6 +119,10 @@ body {
   transition: all 0.2s ease;
 }
 
+.input ~ .icon {
+  color: #d1d1d1;
+}
+
 .input:hover {
   border-color: #c7c7c7;
   box-shadow: inset 0 0 0.15em #d1d1d1;
@@ -127,6 +131,10 @@ body {
 .input:focus {
   outline: 0;
   box-shadow: inset 0 0 0.15em #c2c2c2;
+}
+
+.input:focus ~ .icon {
+  color: #2e2e2e;
 }
 
 .input.is-small {
@@ -257,6 +265,14 @@ body {
   content: " ";
 }
 
+.select ~ .icon {
+  color: #d1d1d1;
+}
+
+.select:focus ~ .icon {
+  color: #2e2e2e;
+}
+
 .select.is-small select {
   font-size: 0.8rem;
 }
@@ -379,6 +395,10 @@ body {
   padding-right: 2.5em;
 }
 
+.select select ~ .icon {
+  color: #d1d1d1;
+}
+
 .select select:hover {
   border-color: #c7c7c7;
   box-shadow: inset 0 0 0.15em #d1d1d1;
@@ -387,6 +407,10 @@ body {
 .select select:focus {
   outline: 0;
   box-shadow: inset 0 0 0.15em #c2c2c2;
+}
+
+.select select:focus ~ .icon {
+  color: #2e2e2e;
 }
 
 .select select[multiple] {
@@ -420,6 +444,10 @@ body {
   resize: vertical;
 }
 
+.textarea ~ .icon {
+  color: #d1d1d1;
+}
+
 .textarea:hover {
   border-color: #c7c7c7;
   box-shadow: inset 0 0 0.15em #d1d1d1;
@@ -428,6 +456,10 @@ body {
 .textarea:focus {
   outline: 0;
   box-shadow: inset 0 0 0.15em #c2c2c2;
+}
+
+.textarea:focus ~ .icon {
+  color: #2e2e2e;
 }
 
 .textarea:not([rows]) {
@@ -555,6 +587,55 @@ body {
 .checkbox input, .radio input {
   cursor: pointer;
   vertical-align: 0.1em;
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.icon.is-small {
+  font-size: 0.8rem;
+}
+
+.icon.is-large {
+  font-size: 1.2rem;
+}
+
+.icon.is-xlarge {
+  font-size: 1.4rem;
+}
+
+.control {
+  position: relative;
+}
+
+.control.has-icon-left input, .control.has-icon-left select {
+  padding-left: 2em;
+}
+
+.control.has-icon-left .icon.is-left {
+  left: 0;
+}
+
+.control.has-icon-right input {
+  padding-right: 2em;
+}
+
+.control.has-icon-right .icon.is-right {
+  right: 0;
+}
+
+.control .icon {
+  top: 0;
+  position: absolute;
+  width: 2em;
+  height: 2.85em;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .button {

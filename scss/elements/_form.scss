@@ -39,6 +39,10 @@ $control: (
   line-height: $control-height;
   transition: all 0.2s ease;
 
+  & ~ .icon {
+    color: $gray-light;
+  }
+
   &:hover {
     border-color: darken($gray-light, 4%);
     box-shadow: inset 0 0 0.15em $gray-light;
@@ -47,6 +51,10 @@ $control: (
   &:focus {
     outline: 0;
     box-shadow: inset 0 0 0.15em darken($gray-light, 6%);
+
+    & ~ .icon {
+      color: $gray;
+    }
   }
 }
 
@@ -99,6 +107,16 @@ $control: (
       right: $control-padding;
       z-index: 2;
       content: " ";
+    }
+  }
+
+  & ~ .icon {
+    color: $gray-light;
+  }
+
+  &:focus {
+    & ~ .icon {
+      color: $gray;
     }
   }
 
@@ -192,5 +210,54 @@ $control: (
   input {
     cursor: pointer;
     vertical-align: 0.1em;
+  }
+}
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size;
+
+  @each $size, $multipler in get($control, sizes) {
+    &.is-#{$size} {
+      font-size: $multipler;
+    }
+  }
+}
+
+.control {
+  position: relative;
+
+  &.has-icon-left {
+
+    input, select {
+      padding-left: $control-padding * 2;
+    }
+
+    .icon.is-left {
+      left: 0;
+    }
+  }
+
+  &.has-icon-right {
+
+    input {
+      padding-right: $control-padding * 2;
+    }
+
+    .icon.is-right {
+      right: 0;
+    }
+  }
+
+  .icon {
+    top: 0;
+    position: absolute;
+    width: $control-padding * 2;
+    height: $control-height;
+    text-align: center;
+    z-index: 2;
+    pointer-events: none;
   }
 }
