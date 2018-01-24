@@ -103,6 +103,29 @@ body {
   color: #2e2e2e;
 }
 
+.label {
+  color: #1f1f1f;
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 0.4em;
+}
+
+.label.is-small {
+  font-size: 0.8rem;
+}
+
+.label.is-large {
+  font-size: 1.2rem;
+}
+
+.label.is-xlarge {
+  font-size: 1.4rem;
+}
+
 .input {
   display: inline-block;
   padding-right: 1em;
@@ -587,6 +610,44 @@ body {
 .checkbox input, .radio input {
   cursor: pointer;
   vertical-align: 0.1em;
+}
+
+.note {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: 0.25em;
+}
+
+.note:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+.note.is-primary {
+  color: #6e35e9;
+}
+
+.note.is-success {
+  color: #32cd8f;
+}
+
+.note.is-info {
+  color: #08b3f7;
+}
+
+.note.is-warning {
+  color: #ffdb4d;
+}
+
+.note.is-danger {
+  color: #ff476f;
+}
+
+.note.is-white {
+  color: white;
+}
+
+.note.is-link {
+  color: transparent;
 }
 
 .icon {

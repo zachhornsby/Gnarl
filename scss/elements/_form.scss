@@ -58,6 +58,23 @@ $control: (
   }
 }
 
+.label {
+  color: darken($gray, 6%);
+  display: block;
+  font-size: $control-font-size;
+  font-weight: 700;
+
+  &:not(:last-child) {
+    margin-bottom: 0.4em;
+  }
+
+  @each $size, $multipler in get($control, sizes) {
+    &.is-#{$size} {
+      font-size: $multipler;
+    }
+  }
+}
+
 .input {
   @include control;
 
@@ -210,6 +227,22 @@ $control: (
   input {
     cursor: pointer;
     vertical-align: 0.1em;
+  }
+}
+
+.note {
+  display: block;
+  font-size: $font-size-small;
+  margin-top: 0.25em;
+
+  &:not(:last-child) {
+    margin-bottom: 0.5em;
+  }
+
+  @each $name, $hsl in get($control, types) {
+    &.is-#{$name} {
+      color: $hsl;
+    }
   }
 }
 
