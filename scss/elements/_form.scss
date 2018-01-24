@@ -246,6 +246,28 @@ $control: (
   }
 }
 
+.field {
+
+  &.is-wide {
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    .select {
+      width: 100%;
+      display: block;
+
+      select {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 0.85em;
+  }
+}
+
 .icon {
   display: inline-flex;
   justify-content: center;
@@ -292,5 +314,23 @@ $control: (
     text-align: center;
     z-index: 2;
     pointer-events: none;
+  }
+}
+
+.fields {
+  display: flex;
+  justify-content: flex-start;
+
+  .field {
+    flex-shrink: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+      margin-right: $control-spacing;
+    }
+
+    &:last-child {
+      margin-bottom: $control-spacing;
+    }
   }
 }

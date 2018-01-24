@@ -650,6 +650,25 @@ body {
   color: transparent;
 }
 
+.field.is-wide {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.field.is-wide .select {
+  width: 100%;
+  display: block;
+}
+
+.field.is-wide .select select {
+  width: 100%;
+  max-width: 100%;
+}
+
+.field:not(:last-child) {
+  margin-bottom: 0.85em;
+}
+
 .icon {
   display: inline-flex;
   justify-content: center;
@@ -697,6 +716,24 @@ body {
   text-align: center;
   z-index: 2;
   pointer-events: none;
+}
+
+.fields {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.fields .field {
+  flex-shrink: 0;
+}
+
+.fields .field:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: 0.75em;
+}
+
+.fields .field:last-child {
+  margin-bottom: 0.75em;
 }
 
 .button {
