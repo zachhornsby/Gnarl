@@ -104,6 +104,126 @@ body {
   color: #2e2e2e;
 }
 
+.contain {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media screen and (min-width: 768px), print {
+  .contain {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1008px) {
+  .contain {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contain {
+    max-width: 1152px;
+  }
+}
+
+@media screen and (min-width: 1392px) {
+  .contain {
+    max-width: 1344px;
+  }
+}
+
+.column {
+  padding: 0.875em;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.column.is-1 {
+  flex: none;
+  width: calc( 100% * 1/12);
+}
+
+.column.is-2 {
+  flex: none;
+  width: calc( 100% * 2/12);
+}
+
+.column.is-3 {
+  flex: none;
+  width: calc( 100% * 3/12);
+}
+
+.column.is-4 {
+  flex: none;
+  width: calc( 100% * 4/12);
+}
+
+.column.is-5 {
+  flex: none;
+  width: calc( 100% * 5/12);
+}
+
+.column.is-6 {
+  flex: none;
+  width: 50%;
+}
+
+.column.is-7 {
+  flex: none;
+  width: calc( 100% * 7/12);
+}
+
+.column.is-8 {
+  flex: none;
+  width: calc( 100% * 8/12);
+}
+
+.column.is-9 {
+  flex: none;
+  width: calc( 100% * 9/12);
+}
+
+.column.is-10 {
+  flex: none;
+  width: calc( 100% * 10/12);
+}
+
+.column.is-11 {
+  flex: none;
+  width: calc( 100% * 11/12);
+}
+
+.column.is-12 {
+  flex: none;
+  width: 100%;
+}
+
+.columns {
+  display: flex;
+  margin-top: -0.875em;
+  margin-left: -0.875em;
+  margin-right: -0.875em;
+}
+
+.columns:last-child {
+  margin-bottom: -0.875em;
+}
+
+.columns:not(:last-child) {
+  margin-bottom: 0.875em;
+}
+
+.columns.is-mutliline {
+  flex-wrap: wrap;
+}
+
+.columns.is-gapless .column {
+  padding: 0;
+}
+
 .label {
   color: #1f1f1f;
   display: block;

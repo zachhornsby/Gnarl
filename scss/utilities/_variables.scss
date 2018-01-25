@@ -27,7 +27,14 @@ $body-font-weight: 300 !default;
 $body-line-height: 1.5 !default;
 $body-color: $gray !default;
 
-// States
+// Grid
+$gap: 24px !default;
+$tablet: 768px !default;
+$desktop: 960px + (2 * $gap) !default;
+$widescreen: 1152px + (2 * $gap) !default;
+$cinema: 1344px + (2 * $gap) !default;
+
+// States;
 $state: (
   primary: $primary,
   success: $success,

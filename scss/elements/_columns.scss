@@ -1,0 +1,55 @@
+$column-gap: 0.875em;
+
+$column-size: (
+  1: calc( 100% * 1/12),
+  2: calc( 100% * 2/12),
+  3: calc( 100% * 3/12),
+  4: calc( 100% * 4/12),
+  5: calc( 100% * 5/12),
+  6: 50%,
+  7: calc( 100% * 7/12),
+  8: calc( 100% * 8/12),
+  9: calc( 100% * 9/12),
+  10: calc( 100% * 10/12),
+  11: calc( 100% * 11/12),
+  12: 100%
+);
+
+.column {
+  padding: $column-gap;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  @each $size, $percent in $column-size {
+    &.is-#{$size} {
+      flex: none;
+      width: $percent;
+    }
+  }
+}
+
+.columns {
+  display: flex;
+  margin-top: -$column-gap;
+  margin-left: -$column-gap;
+  margin-right: -$column-gap;
+
+  &:last-child {
+    margin-bottom: (-$column-gap);
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $column-gap;
+  }
+
+  &.is-mutliline {
+    flex-wrap: wrap;
+  }
+
+  &.is-gapless {
+    .column {
+      padding: 0;
+    }
+  }
+}

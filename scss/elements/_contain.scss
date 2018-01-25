@@ -1,0 +1,21 @@
+.contain {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  @include tablet {
+    max-width: $tablet;
+  }
+
+  @include desktop {
+    max-width: $desktop - (2 * $gap);
+  }
+
+  @include widescreen {
+    max-width: $widescreen - (2 * $gap);
+  }
+
+  @include cinema {
+    max-width: $cinema - (2 * $gap);
+  }
+}
