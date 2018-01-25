@@ -88,6 +88,7 @@ th {
 }
 
 html {
+  overflow-x: hidden;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
@@ -101,6 +102,57 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: #2e2e2e;
+}
+
+.column {
+  padding: 0.875em;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.column.is-one-fourth {
+  flex: none;
+  width: 25%;
+}
+
+.column.is-half {
+  flex: none;
+  width: 50%;
+}
+
+.column.is-three-fourth {
+  flex: none;
+  width: 75%;
+}
+
+.column.is-full {
+  flex: none;
+  width: 100%;
+}
+
+.column.is-one-third {
+  flex: none;
+  width: 33.333%;
+}
+
+.column > div {
+  padding: 1em;
+  color: white;
+  background-color: #6e35e9;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.columns {
+  display: flex;
+  margin-top: -0.875em;
+  margin-left: -0.875em;
+  margin-right: -0.875em;
+}
+
+.columns.is-mutliline {
+  flex-wrap: wrap;
 }
 
 .label {
@@ -729,11 +781,11 @@ body {
 
 .fields .field:not(:last-child) {
   margin-bottom: 0;
-  margin-right: 0.75em;
+  margin-right: 0.875em;
 }
 
 .fields .field:last-child {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.875em;
 }
 
 .button {
