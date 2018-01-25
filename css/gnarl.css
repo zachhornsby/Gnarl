@@ -104,57 +104,6 @@ body {
   color: #2e2e2e;
 }
 
-.column {
-  padding: 0.875em;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-.column.is-one-fourth {
-  flex: none;
-  width: 25%;
-}
-
-.column.is-half {
-  flex: none;
-  width: 50%;
-}
-
-.column.is-three-fourth {
-  flex: none;
-  width: 75%;
-}
-
-.column.is-full {
-  flex: none;
-  width: 100%;
-}
-
-.column.is-one-third {
-  flex: none;
-  width: 33.333%;
-}
-
-.column > div {
-  padding: 1em;
-  color: white;
-  background-color: #6e35e9;
-  border-radius: 2px;
-  text-align: center;
-}
-
-.columns {
-  display: flex;
-  margin-top: -0.875em;
-  margin-left: -0.875em;
-  margin-right: -0.875em;
-}
-
-.columns.is-mutliline {
-  flex-wrap: wrap;
-}
-
 .label {
   color: #1f1f1f;
   display: block;
@@ -289,19 +238,6 @@ body {
   box-shadow: 0 0 0.15em #ff2957;
 }
 
-.input.is-white {
-  border-color: white;
-}
-
-.input.is-white:hover {
-  border-color: whitesmoke;
-  box-shadow: inset 0 0 0.15em white;
-}
-
-.input.is-white:focus {
-  box-shadow: 0 0 0.15em #f0f0f0;
-}
-
 .input.is-link {
   border-color: transparent;
 }
@@ -423,19 +359,6 @@ body {
 
 .select.is-danger select:focus {
   box-shadow: 0 0 0.2em #ff2957;
-}
-
-.select.is-white select {
-  border-color: white;
-}
-
-.select.is-white select:hover {
-  border-color: whitesmoke;
-  box-shadow: inset 0 0 0.15em white;
-}
-
-.select.is-white select:focus {
-  box-shadow: 0 0 0.2em #f0f0f0;
 }
 
 .select.is-link select {
@@ -623,19 +546,6 @@ body {
   box-shadow: inset 0 0 0.2em #ff2957;
 }
 
-.textarea.is-white {
-  border-color: white;
-}
-
-.textarea.is-white:hover {
-  border-color: whitesmoke;
-  box-shadow: inset 0 0 0.15em white;
-}
-
-.textarea.is-white:focus {
-  box-shadow: inset 0 0 0.2em #f0f0f0;
-}
-
 .textarea.is-link {
   border-color: transparent;
 }
@@ -692,10 +602,6 @@ body {
 
 .note.is-danger {
   color: #ff476f;
-}
-
-.note.is-white {
-  color: white;
 }
 
 .note.is-link {
@@ -1006,37 +912,6 @@ body {
 .button.is-danger.is-hollow:hover:not([disabled]) {
   border-color: #ff476f;
   background-color: #ff476f;
-  color: white;
-}
-
-.button.is-white {
-  background-color: white;
-  border-color: white;
-  color: white;
-}
-
-.button.is-white:hover:not([disabled]) {
-  border-color: whitesmoke;
-  background-color: whitesmoke;
-}
-
-.button.is-white:active:not([disabled]) {
-  border-color: #cccccc;
-  background-color: #cccccc;
-}
-
-.button.is-white:focus {
-  box-shadow: 0 0 0.2em #cccccc inset;
-}
-
-.button.is-white.is-hollow {
-  border-color: white;
-  color: white;
-}
-
-.button.is-white.is-hollow:hover:not([disabled]) {
-  border-color: white;
-  background-color: white;
   color: white;
 }
 

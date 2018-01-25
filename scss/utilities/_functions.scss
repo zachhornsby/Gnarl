@@ -1,7 +1,0 @@
-// Getting values from nested maps
-@function get($map, $keys) {
-  @each $key in $keys {
-      $map: map-get($map, $key);
-  }
-  @return $map;
-}

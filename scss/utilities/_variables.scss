@@ -27,6 +27,23 @@ $body-font-weight: 300 !default;
 $body-line-height: 1.5 !default;
 $body-color: $gray !default;
 
+// States
+$state: (
+  primary: $primary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  link: transparent
+);
+
+// Sizes
+$scale: (
+  small: $font-size-small,
+  large: $font-size-large,
+  xlarge: $font-size-xlarge,
+);
+
 // Miscellaneous
 $scroll-behavior: smooth !default;
 $border-radius: 2px !default;

@@ -7,23 +7,6 @@ $control-line-height: $control-height - $control-border-size * 2 !default;
 $control-arrow-size: 0.5em !default;
 $control-gap: 0.875em !default;
 
-$control: (
-  types: (
-    primary: $primary,
-    success: $success,
-    info: $info,
-    warning: $warning,
-    danger: $danger,
-    white: $white,
-    link: transparent
-  ),
-  sizes: (
-    small: $font-size-small,
-    large: $font-size-large,
-    xlarge: $font-size-xlarge,
-  )
-);
-
 @mixin control() {
   display: inline-block;
   padding-right: $control-padding;
@@ -68,7 +51,7 @@ $control: (
     margin-bottom: 0.4em;
   }
 
-  @each $size, $multipler in get($control, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} {
       font-size: $multipler;
     }
@@ -78,23 +61,23 @@ $control: (
 .input {
   @include control;
 
-  @each $size, $multipler in get($control, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} {
       font-size: $multipler;
     }
   }
 
-  @each $name, $hsl in get($control, types) {
+  @each $name, $color in $state {
     &.is-#{$name} {
-      border-color: $hsl;
+      border-color: $color;
 
       &:hover {
-        border-color: darken($hsl, 4%);
-        box-shadow: inset 0 0 0.15em $hsl;
+        border-color: darken($color, 4%);
+        box-shadow: inset 0 0 0.15em $color;
       }
 
       &:focus {
-        box-shadow: 0 0 0.15em darken($hsl, 6%);
+        box-shadow: 0 0 0.15em darken($color, 6%);
       }
     }
   }
@@ -137,23 +120,23 @@ $control: (
     }
   }
 
-  @each $size, $multipler in get($control, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} select {
       font-size: $multipler;
     }
   }
 
-  @each $name, $hsl in get($control, types) {
+  @each $name, $color in $state {
     &.is-#{$name} select {
-      border-color: $hsl;
+      border-color: $color;
 
       &:hover {
-        border-color: darken($hsl, 4%);
-        box-shadow: inset 0 0 0.15em $hsl;
+        border-color: darken($color, 4%);
+        box-shadow: inset 0 0 0.15em $color;
       }
 
       &:focus {
-        box-shadow: 0 0 0.2em darken($hsl, 6%);
+        box-shadow: 0 0 0.2em darken($color, 6%);
       }
     }
   }
@@ -193,23 +176,23 @@ $control: (
     height: unset;
   }
 
-  @each $size, $multipler in get($control, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} {
       font-size: $multipler;
     }
   }
 
-  @each $name, $hsl in get($control, types) {
+  @each $name, $color in $state {
     &.is-#{$name} {
-      border-color: $hsl;
+      border-color: $color;
 
       &:hover {
-        border-color: darken($hsl, 4%);
-        box-shadow: inset 0 0 0.15em $hsl;
+        border-color: darken($color, 4%);
+        box-shadow: inset 0 0 0.15em $color;
       }
 
       &:focus {
-        box-shadow: inset 0 0 0.2em darken($hsl, 6%);
+        box-shadow: inset 0 0 0.2em darken($color, 6%);
       }
     }
   }
@@ -239,9 +222,9 @@ $control: (
     margin-bottom: 0.5em;
   }
 
-  @each $name, $hsl in get($control, types) {
+  @each $name, $color in $state {
     &.is-#{$name} {
-      color: $hsl;
+      color: $color;
     }
   }
 }
@@ -274,7 +257,7 @@ $control: (
   align-items: center;
   font-size: $font-size;
 
-  @each $size, $multipler in get($control, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} {
       font-size: $multipler;
     }

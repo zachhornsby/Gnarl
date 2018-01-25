@@ -5,23 +5,6 @@ $button-border-radius: 0.1em !default;
 $button-border-size: 0.1em !default;
 $button-line-height: $button-height - $button-border-size * 2 !default;
 
-$button: (
-  types: (
-    primary: $primary,
-    success: $success,
-    info: $info,
-    warning: $warning,
-    danger: $danger,
-    white: $white,
-    link: transparent
-  ),
-  sizes: (
-    small: $font-size-small,
-    large: $font-size-large,
-    xlarge: $font-size-xlarge,
-  )
-);
-
 .button {
   display: inline-block;
   margin: 0;
@@ -75,16 +58,16 @@ $button: (
     cursor: default;
   }
 
-  @each $size, $multipler in get($button, sizes) {
+  @each $size, $multipler in $scale {
     &.is-#{$size} {
       font-size: $multipler;
     }
   }
 
-  @each $name, $hsl in get($button, types) {
+  @each $name, $color in $state {
     &.is-#{$name} {
-      background-color: $hsl;
-      border-color: $hsl;
+      background-color: $color;
+      border-color: $color;
 
       @if $name == warning or $name == link {
         color: $gray;
@@ -93,29 +76,29 @@ $button: (
       }
 
       &:hover:not([disabled]) {
-        border-color: darken($hsl, 4%);
-        background-color: darken($hsl, 4%);
+        border-color: darken($color, 4%);
+        background-color: darken($color, 4%);
       }
 
       &:active:not([disabled]) {
-        border-color: darken($hsl, 20%);
-        background-color: darken($hsl, 20%);
+        border-color: darken($color, 20%);
+        background-color: darken($color, 20%);
       }
 
       &:focus {
-        box-shadow: 0 0 0.2em darken($hsl, 20%) inset;
+        box-shadow: 0 0 0.2em darken($color, 20%) inset;
       }
 
       &.is-hollow {
-        border-color: $hsl;
+        border-color: $color;
 
         @if $name != link {
-          color: $hsl;
+          color: $color;
         }
 
         &:hover:not([disabled]) {
-          border-color: $hsl;
-          background-color: $hsl;
+          border-color: $color;
+          background-color: $color;
 
           @if $name == warning or $name == link {
             color: $gray;
