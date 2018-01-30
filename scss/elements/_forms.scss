@@ -1,9 +1,9 @@
 $control-font-size: $font-size !default;
-$control-height: 2.85em !default;
+$control-height: 2.65em !default;
 $control-padding: 1em !default;
 $control-border-radius: 0.1em !default;
-$control-border-size: 0.1em !default;
-$control-line-height: $control-height - $control-border-size * 2 !default;
+$control-border-size: 1px !default;
+$control-line-height: 1.5 !default;
 $control-arrow-size: 0.5em !default;
 $control-gap: 0.875em !default;
 
@@ -14,30 +14,36 @@ $control-gap: 0.875em !default;
   height: $control-height;
   max-width: 100%;
   width: 100%;
-  border: 0.1em solid $gray-light;
+  border: $control-border-size solid $gray-light;
   border-radius: $control-border-radius;
   background-color: $white;
   color: $gray;
   font-size: $control-font-size;
-  line-height: $control-height;
+  line-height: $control-line-height;
   transition: all 0.2s ease;
 
   & ~ .icon {
     color: $gray-light;
   }
 
-  &:hover {
-    border-color: darken($gray-light, 4%);
-    box-shadow: inset 0 0 0.15em $gray-light;
+  &:not([disabled]) {
+    &:hover {
+      border-color: darken($gray-light, 4%);
+      box-shadow: inset 0 0 0.15em $gray-light;
+    }
+
+    &:focus {
+      outline: 0;
+      box-shadow: inset 0 0 0.15em darken($gray-light, 6%);
+
+      & ~ .icon {
+        color: $gray;
+      }
+    }
   }
 
-  &:focus {
-    outline: 0;
-    box-shadow: inset 0 0 0.15em darken($gray-light, 6%);
-
-    & ~ .icon {
-      color: $gray;
-    }
+  &[disabled] {
+    opacity: 0.6;
   }
 }
 
@@ -304,16 +310,19 @@ $control-gap: 0.875em !default;
   display: flex;
   justify-content: flex-start;
 
+  &:last-child {
+    .field {
+      margin-bottom: 0;
+    }
+  }
+
   .field {
     flex-shrink: 0;
+    margin-bottom: $control-gap;
 
     &:not(:last-child) {
       margin-bottom: 0;
       margin-right: $control-gap;
-    }
-
-    &:last-child {
-      margin-bottom: $control-gap;
     }
   }
 }
