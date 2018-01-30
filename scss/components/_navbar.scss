@@ -1,0 +1,99 @@
+$navbar-height: 3.95rem !default;
+$navbar-logo-height: 1.25rem !default;
+$navbar-font-size: $font-size !default;
+$navbar-item-spacing: 0.6em !default;
+$navbar-padding: 0.4em $navbar-item-spacing !default;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: ($gap /  4) $gap;
+  height: $navbar-height;
+  font-size: $navbar-font-size;
+  color: $gray;
+
+  @each $name, $color in $state {
+    &.is-#{$name} {
+      background-color: $color;
+      border-color: $color;
+      color: white;
+    }
+  }
+
+  &.is-fixed-top, &.is-fixed-bottom {
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    right: 0;
+  }
+
+  &.is-fixed-top {
+    top: 0;
+  }
+
+  &.is-fixed-bottom {
+    bottom: 0;
+  }
+
+  > *:first-child:not(.contain) {
+    margin-left: -$navbar-item-spacing;
+  }
+
+  > *:last-child:not(.contain) {
+    margin-right: -$navbar-item-spacing;
+  }
+
+  .contain {
+    display: flex;
+    align-items: center;
+    height: $navbar-height;
+
+    > *:first-child {
+      margin-left: -$navbar-item-spacing;
+    }
+
+    > *:last-child {
+      margin-right: -$navbar-item-spacing;
+    }
+  }
+}
+
+.navbar-brand {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: $navbar-padding;
+  font-size: $font-size-large;
+  white-space: nowrap;
+  color: inherit;
+
+  .navbar-logo {
+    width: auto;
+    max-height: $navbar-logo-height;
+  }
+}
+
+.navbar-nav, .navbar-start, .navbar-end {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.navbar-start {
+  justify-content: flex-start;
+  margin-right: auto;
+}
+
+.navbar-end {
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.navbar-item {
+  display: inline-block;
+  padding: $navbar-padding;
+  color: inherit;
+}
