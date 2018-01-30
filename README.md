@@ -6,16 +6,6 @@ A CSS framework.
 
 Gnarl is in early development. Everything is subject to change.
 
-- [x] Typography
-- [x] Colors
-- [x] Variables (ongoing)
-- [x] Buttons
-- [ ] Forms
-- [ ] Tables
-- [ ] Figure
-- [ ] Navbar
-- [ ] Grid
-
 ## Quick install
 
 Not much here yet.
