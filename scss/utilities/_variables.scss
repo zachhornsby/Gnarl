@@ -2,9 +2,9 @@
 $font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif !default;
 $font-monospace: monospace !default;
 $font-size: 1rem !default;
-$font-size-small: $font-size * 0.8 !default;
-$font-size-large: $font-size * 1.2 !default;
-$font-size-xlarge: $font-size * 1.4 !default;
+$font-size-small: $font-size * 0.85 !default;
+$font-size-large: $font-size * 1.25 !default;
+$font-size-xlarge: $font-size * 1.45 !default;
 
 // Colors
 $primary: hsl(259, 80%, 56%) !default;
@@ -28,11 +28,11 @@ $body-line-height: 1.5 !default;
 $body-color: $gray !default;
 
 // Grid
-$gap: 24px !default;
-$tablet: 768px !default;
-$desktop: 960px + (2 * $gap) !default;
-$widescreen: 1152px + (2 * $gap) !default;
-$cinema: 1344px + (2 * $gap) !default;
+$gap: 1.5em !default;
+$tablet: 48em !default;
+$desktop: 60em + (2 * $gap) !default;
+$widescreen: 72em + (2 * $gap) !default;
+$cinema: 84em + (2 * $gap) !default;
 
 // States;
 $state: (
@@ -41,6 +41,7 @@ $state: (
   info: $info,
   warning: $warning,
   danger: $danger,
+  white: $white,
   link: transparent
 );
 
@@ -48,7 +49,7 @@ $state: (
 $scale: (
   small: $font-size-small,
   large: $font-size-large,
-  xlarge: $font-size-xlarge,
+  xlarge: $font-size-xlarge
 );
 
 // Miscellaneous
