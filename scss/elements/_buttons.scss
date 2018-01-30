@@ -175,6 +175,13 @@ $button-line-height: $body-line-height !default;
       color: $gray;
     }
   }
+
+  &.is-borderless {
+
+    &:not(:hover) {
+      border-color: transparent !important;
+    }
+  }
 }
 
 .buttons {
