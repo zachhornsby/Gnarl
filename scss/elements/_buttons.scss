@@ -90,6 +90,18 @@ $button-line-height: $body-line-height !default;
         box-shadow: 0 0 0.2em darken($color, 20%) inset;
       }
 
+      &.is-hamburger {
+        span {
+          @if $name == warning or $name == link {
+            background-color: $gray;
+          } @else if $name == white {
+            background-color: $primary;
+          } @else {
+            background-color: $white;
+          }
+        }
+      }
+
       &.is-hollow {
         border-color: $color;
 
@@ -97,6 +109,16 @@ $button-line-height: $body-line-height !default;
           color: $gray;
         } @else {
           color: $color;
+        }
+
+        &.is-hamburger {
+          span {
+            @if $name == warning or $name == link {
+              background-color: $gray;
+            } @else {
+              background-color: $white;
+            }
+          }
         }
 
         &:hover:not([disabled]) {
@@ -110,8 +132,35 @@ $button-line-height: $body-line-height !default;
           } @else {
             color: $white;
           }
+
+          &.is-hamburger {
+            span {
+              @if $name == warning or $name == link {
+                background-color: $gray;
+              } @else if $name == white {
+                background-color: $primary;
+              } @else {
+                background-color: $white;
+              }
+            }
+          }
         }
       }
+    }
+  }
+
+  &.is-hamburger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $button-padding / 1.5;
+
+    span {
+      background-color: $gray;
+      display:block;
+      width: 1.6em;
+      height: 1px;
+      margin: 0;
     }
   }
 
