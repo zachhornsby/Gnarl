@@ -1,12 +1,13 @@
 $button-font-size: $font-size !default;
-$button-height: 2.85em !default;
+$button-height: 2.65em !default;
 $button-padding: 1em !default;
 $button-border-radius: 0.1em !default;
-$button-border-size: 0.1em !default;
-$button-line-height: $button-height - $button-border-size * 2 !default;
+$button-border-size: 1px !default;
+$button-line-height: $body-line-height !default;
 
 .button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -28,13 +29,11 @@ $button-line-height: $button-height - $button-border-size * 2 !default;
   }
 
   .icon {
-    position: relative;
-    top: -0.125em;
     font-size: 0.7em;
   }
 
   *:not(:last-child) {
-    margin-right: 0.25em;
+    margin-right: 0.5em;
   }
 
   &:hover:not([disabled]) {
@@ -71,6 +70,8 @@ $button-line-height: $button-height - $button-border-size * 2 !default;
 
       @if $name == warning or $name == link {
         color: $gray;
+      } @else if $name == white {
+        color: $primary;
       } @else {
         color: $white;
       }
@@ -92,7 +93,9 @@ $button-line-height: $button-height - $button-border-size * 2 !default;
       &.is-hollow {
         border-color: $color;
 
-        @if $name != link {
+        @if $name == link {
+          color: $gray;
+        } @else {
           color: $color;
         }
 
@@ -102,6 +105,8 @@ $button-line-height: $button-height - $button-border-size * 2 !default;
 
           @if $name == warning or $name == link {
             color: $gray;
+          } @else if $name == white {
+            color: $primary;
           } @else {
             color: $white;
           }
