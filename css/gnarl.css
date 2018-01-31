@@ -912,7 +912,7 @@ a {
 }
 
 .button.is-primary.is-hollow.is-hamburger span {
-  background-color: white;
+  background-color: #6e35e9;
 }
 
 .button.is-primary.is-hollow:hover:not([disabled]) {
@@ -955,7 +955,7 @@ a {
 }
 
 .button.is-success.is-hollow.is-hamburger span {
-  background-color: white;
+  background-color: #32cd8f;
 }
 
 .button.is-success.is-hollow:hover:not([disabled]) {
@@ -998,7 +998,7 @@ a {
 }
 
 .button.is-info.is-hollow.is-hamburger span {
-  background-color: white;
+  background-color: #08b3f7;
 }
 
 .button.is-info.is-hollow:hover:not([disabled]) {
@@ -1084,7 +1084,7 @@ a {
 }
 
 .button.is-danger.is-hollow.is-hamburger span {
-  background-color: white;
+  background-color: #ff476f;
 }
 
 .button.is-danger.is-hollow:hover:not([disabled]) {

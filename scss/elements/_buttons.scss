@@ -116,7 +116,7 @@ $button-line-height: $body-line-height !default;
             @if $name == warning or $name == link {
               background-color: $gray;
             } @else {
-              background-color: $white;
+              background-color: $color;
             }
           }
         }
