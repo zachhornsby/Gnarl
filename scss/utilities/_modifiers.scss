@@ -45,6 +45,16 @@
   bottom: 0;
 }
 
+// Visibility
+
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
 // Other
 
 .no-margin {

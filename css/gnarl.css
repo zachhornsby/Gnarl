@@ -130,6 +130,14 @@ th {
   bottom: 0;
 }
 
+.is-invisible {
+  visibility: hidden !important;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
 .no-margin {
   margin: 0 !important;
 }
