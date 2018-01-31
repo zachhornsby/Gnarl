@@ -1,0 +1,5 @@
+$section-padding: ($gap * 2) $gap !default;
+
+.section {
+  padding: $section-padding;
+}
