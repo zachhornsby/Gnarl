@@ -7,8 +7,8 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
 .navbar {
   background-color: white;
   display: flex;
-  align-items: center;
-  padding: ($gap /  4) $gap;
+  align-items: stretch;
+  padding: 0 $gap;
   height: $navbar-height;
   font-size: $navbar-font-size;
   box-shadow: 0 0 1px rgba(0,0,0,0.3);
@@ -24,6 +24,32 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
         color: $primary;
       } @else {
         color: $white;
+      }
+
+      @if $name != white {
+        .navbar-item {
+          &:after {
+            background-color: rgba(255,255,255,0.4);
+          }
+
+          &.is-active {
+            &:after {
+              background-color: $white;
+            }
+          }
+        }
+      } @else {
+        .navbar-item {
+          &:after {
+            background-color: $gray-light;
+          }
+
+          &.is-active {
+            &:after {
+              background-color: $primary;
+            }
+          }
+        }
       }
     }
   }
@@ -52,7 +78,8 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
 }
 
 .navbar-brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
   padding: $navbar-padding;
   font-size: $font-size-large;
@@ -67,7 +94,7 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
 
 .navbar-nav, .navbar-start, .navbar-end {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .navbar-nav {
@@ -86,7 +113,38 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
 }
 
 .navbar-item {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   padding: $navbar-padding;
   color: inherit;
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 -1px;
+    height: 3px;
+    background-color: $gray-light;
+    content: '';
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:not(:hover):not(.is-active):after {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:not(a) {
+    &:after {
+      display: none;
+    }
+  }
+
+  &.is-active {
+    &:after {
+      background-color: $primary;
+    }
+  }
 }

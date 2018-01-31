@@ -1365,8 +1365,8 @@ a {
 .navbar {
   background-color: white;
   display: flex;
-  align-items: center;
-  padding: 0.375em 1.5em;
+  align-items: stretch;
+  padding: 0 1.5em;
   height: 3.95rem;
   font-size: 1rem;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
@@ -1378,9 +1378,25 @@ a {
   color: white;
 }
 
+.navbar.is-primary .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-primary .navbar-item.is-active:after {
+  background-color: white;
+}
+
 .navbar.is-success {
   background-color: #32cd8f;
   color: white;
+}
+
+.navbar.is-success .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-success .navbar-item.is-active:after {
+  background-color: white;
 }
 
 .navbar.is-info {
@@ -1388,9 +1404,25 @@ a {
   color: white;
 }
 
+.navbar.is-info .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-info .navbar-item.is-active:after {
+  background-color: white;
+}
+
 .navbar.is-warning {
   background-color: #ffdb4d;
   color: #2e2e2e;
+}
+
+.navbar.is-warning .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-warning .navbar-item.is-active:after {
+  background-color: white;
 }
 
 .navbar.is-danger {
@@ -1398,14 +1430,38 @@ a {
   color: white;
 }
 
+.navbar.is-danger .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-danger .navbar-item.is-active:after {
+  background-color: white;
+}
+
 .navbar.is-white {
   background-color: white;
   color: #6e35e9;
 }
 
+.navbar.is-white .navbar-item:after {
+  background-color: #d1d1d1;
+}
+
+.navbar.is-white .navbar-item.is-active:after {
+  background-color: #6e35e9;
+}
+
 .navbar.is-link {
   background-color: transparent;
   color: #2e2e2e;
+}
+
+.navbar.is-link .navbar-item:after {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.navbar.is-link .navbar-item.is-active:after {
+  background-color: white;
 }
 
 .navbar > *:first-child:not(.contain) {
@@ -1431,7 +1487,8 @@ a {
 }
 
 .navbar-brand {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   flex-shrink: 0;
   padding: 0.4em 0.6em;
   font-size: 1.25rem;
@@ -1446,7 +1503,7 @@ a {
 
 .navbar-nav, .navbar-start, .navbar-end {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .navbar-nav {
@@ -1465,9 +1522,36 @@ a {
 }
 
 .navbar-item {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   padding: 0.4em 0.6em;
   color: inherit;
+}
+
+.navbar-item:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 -1px;
+  height: 3px;
+  background-color: #d1d1d1;
+  content: '';
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar-item:not(:hover):not(.is-active):after {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.navbar-item:not(a):after {
+  display: none;
+}
+
+.navbar-item.is-active:after {
+  background-color: #6e35e9;
 }
 
 .section {
