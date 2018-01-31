@@ -1,3 +1,66 @@
+.is-uppercase {
+  text-transform: uppercase !important;
+}
+
+.is-lowercase {
+  text-transform: lowercase !important;
+}
+
+.is-capitalized {
+  text-transform: capitalize !important;
+}
+
+.is-italic {
+  font-style: italic !important;
+}
+
+.is-pulled-left {
+  float: left !important;
+}
+
+.is-pulled-right {
+  float: right !important;
+}
+
+.is-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.is-fixed-top, .is-fixed-bottom {
+  position: fixed;
+  z-index: 30;
+}
+
+.is-fixed-top {
+  top: 0;
+}
+
+.is-fixed-bottom {
+  bottom: 0;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-border {
+  border-color: transparent !important;
+}
+
+.no-radius {
+  border-radius: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -278,21 +341,6 @@ a {
   background-color: transparent;
   border-color: transparent;
   color: white;
-}
-
-.navbar.is-fixed-top, .navbar.is-fixed-bottom {
-  position: fixed;
-  z-index: 30;
-  left: 0;
-  right: 0;
-}
-
-.navbar.is-fixed-top {
-  top: 0;
-}
-
-.navbar.is-fixed-bottom {
-  bottom: 0;
 }
 
 .navbar > *:first-child:not(.contain) {
@@ -1394,10 +1442,6 @@ a {
   background-color: #d1d1d1;
   border-color: #d1d1d1;
   color: #2e2e2e;
-}
-
-.button.is-borderless:not(:hover) {
-  border-color: transparent !important;
 }
 
 .buttons {

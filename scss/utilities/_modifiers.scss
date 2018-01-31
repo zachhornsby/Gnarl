@@ -1,0 +1,68 @@
+// Typography
+
+.is-uppercase {
+  text-transform: uppercase !important;
+}
+
+.is-lowercase {
+  text-transform: lowercase !important;
+}
+
+.is-capitalized {
+  text-transform: capitalize !important;
+}
+
+.is-italic {
+  font-style: italic !important;
+}
+
+// Position
+
+.is-pulled-left {
+  float: left !important;
+}
+
+.is-pulled-right {
+  float: right !important;
+}
+
+.is-sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.is-fixed-top, .is-fixed-bottom {
+  position: fixed;
+  z-index: 30;
+}
+
+.is-fixed-top {
+  top: 0;
+}
+
+.is-fixed-bottom {
+  bottom: 0;
+}
+
+// Other
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-border {
+  border-color: transparent !important;
+}
+
+.no-radius {
+  border-radius: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}

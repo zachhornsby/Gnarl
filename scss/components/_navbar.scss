@@ -20,21 +20,6 @@ $navbar-padding: 0.4em $navbar-item-spacing !default;
     }
   }
 
-  &.is-fixed-top, &.is-fixed-bottom {
-    position: fixed;
-    z-index: 30;
-    left: 0;
-    right: 0;
-  }
-
-  &.is-fixed-top {
-    top: 0;
-  }
-
-  &.is-fixed-bottom {
-    bottom: 0;
-  }
-
   > *:first-child:not(.contain) {
     margin-left: -$navbar-item-spacing;
   }
