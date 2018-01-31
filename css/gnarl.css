@@ -1558,4 +1558,12 @@ a {
   padding: 3em 1.5em;
 }
 
+.section.is-large {
+  padding: 6em 1.5em;
+}
+
+.section.is-xlarge {
+  padding: 9em 1.5em;
+}
+
 /*# sourceMappingURL=gnarl.css.map */

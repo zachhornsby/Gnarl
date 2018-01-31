@@ -1,5 +1,15 @@
-$section-padding: ($gap * 2) $gap !default;
+$section-padding: ($gap * 2) !default;
+$section-padding-large: $section-padding * 2 !default;
+$section-padding-xlarge: $section-padding * 3 !default;
 
 .section {
-  padding: $section-padding;
+  padding: $section-padding $gap;
+
+  &.is-large {
+    padding: $section-padding-large $gap;
+  }
+
+  &.is-xlarge {
+    padding: $section-padding-xlarge $gap;
+  }
 }
