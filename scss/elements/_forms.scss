@@ -295,14 +295,17 @@ $control-gap: 0.875em !default;
     }
   }
 
-  .icon {
-    top: 0;
-    position: absolute;
-    width: $control-padding * 2;
-    height: $control-height;
-    text-align: center;
-    z-index: 2;
-    pointer-events: none;
+  &.has-icon-left, &.has-icon-right {
+
+    .icon {
+      top: 0;
+      position: absolute;
+      width: $control-padding * 2;
+      height: $control-height;
+      text-align: center;
+      z-index: 2;
+      pointer-events: none;
+    }
   }
 }
 

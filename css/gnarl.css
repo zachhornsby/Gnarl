@@ -974,7 +974,7 @@ a {
   right: 0;
 }
 
-.control .icon {
+.control.has-icon-left .icon, .control.has-icon-right .icon {
   top: 0;
   position: absolute;
   width: 2em;
