@@ -1,22 +1,30 @@
 $navbar-height: 3.95rem !default;
-$navbar-logo-height: 1.25rem !default;
+$navbar-logo-height: 1.1rem !default;
 $navbar-font-size: $font-size !default;
 $navbar-item-spacing: 0.6em !default;
 $navbar-padding: 0.4em $navbar-item-spacing !default;
 
 .navbar {
+  background-color: white;
   display: flex;
   align-items: center;
   padding: ($gap /  4) $gap;
   height: $navbar-height;
   font-size: $navbar-font-size;
+  box-shadow: 0 0 1px rgba(0,0,0,0.3);
   color: $gray;
 
   @each $name, $color in $state {
     &.is-#{$name} {
       background-color: $color;
-      border-color: $color;
-      color: white;
+
+      @if $name == warning or $name == link {
+        color: $gray;
+      } @else if $name == white {
+        color: $primary;
+      } @else {
+        color: $white;
+      }
     }
   }
 
