@@ -1,12 +1,12 @@
 @charset "utf-8";
 
+@import "scss/setup/reset.scss";
+@import "scss/setup/variables.scss";
 @import "scss/utilities/mixins.scss";
-@import "scss/utilities/variables.scss";
 @import "scss/utilities/modifiers.scss";
-@import "scss/base/reset.scss";
-@import "scss/base/generic.scss";
+@import "scss/setup/generic.scss";
+@import "scss/elements/forms.scss";
+@import "scss/elements/buttons.scss";
 @import "scss/elements/contain.scss";
 @import "scss/elements/columns.scss";
 @import "scss/components/navbar.scss";
-@import "scss/elements/forms.scss";
-@import "scss/elements/buttons.scss";
